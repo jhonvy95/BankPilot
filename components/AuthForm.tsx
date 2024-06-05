@@ -37,16 +37,16 @@ const AuthForm = ({ type }: { type: "sign-in" | "sign-up" }) => {
       // Sign up with Appwrite & create plaid token
 
       if (type === "sign-up") {
-        // const newUser = await signUp(data);
-        // setUser(newUser);
+        const newUser = await signUp(data);
+        setUser(newUser);
       }
 
       if (type === "sign-in") {
-        // const respose = await signIn({
-        //   email: data.email,
-        //   password: data.password,
-        // });
-        // if (respose) router.push("/");
+        const respose = await signIn({
+          email: data.email,
+          password: data.password,
+        });
+        if (respose) router.push("/");
       }
     } catch (error) {
       console.log(error);
