@@ -32,8 +32,8 @@ export const signIn = async ({ email, password }: signInProps) => {
   }
 };
 
-export const signUp = async (userData: SignUpParams) => {
-  const { email, password, firstName, lastName } = userData;
+export const signUp = async ({ password, ...userData }: SignUpParams) => {
+  const { email, firstName, lastName } = userData;
 
   let newUserAccount;
 
@@ -100,7 +100,7 @@ export const createLinkToken = async (user: User) => {
   try {
     const tokenParams = {
       user: {
-        client_user_id: user.$id,
+        client_user_id: `${user.firstName} ${user.lastName}`,
       },
       client_name: user.name,
       products: ["auth"] as Products[],
