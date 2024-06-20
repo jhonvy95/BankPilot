@@ -9,6 +9,7 @@ import React from "react";
 import Footer from "./Footer";
 
 const Sidebar = ({ user }: SiderbarProps) => {
+  console.log(user);
   const pathname = usePathname();
   return (
     <section className="sidebar">
