@@ -10,7 +10,6 @@ import Footer from "./Footer";
 import PlaidLink from "./PlaidLink";
 
 const Sidebar = ({ user }: SiderbarProps) => {
-  console.log(user);
   const pathname = usePathname();
   return (
     <section className="sidebar">
