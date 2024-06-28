@@ -10,6 +10,8 @@ const MyBanks = async () => {
     userId: loggedIn.$id,
   });
 
+  console.log(accounts);
+
   return (
     <section className="flex">
       <div className="my-banks">
@@ -19,7 +21,7 @@ const MyBanks = async () => {
           <div className="flex flex-wrap gap-6">
             {accounts &&
               accounts.data.map((a: Account) => (
-                <BankCard key={a.id} account={a} userName={loggedIn?.firstName} />
+                <BankCard key={accounts.id} account={a} userName={loggedIn?.firstName} />
               ))}
           </div>
         </div>
