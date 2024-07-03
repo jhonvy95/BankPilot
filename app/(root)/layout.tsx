@@ -19,7 +19,7 @@ const RootLayout = async ({
       <Sidebar user={loggedIn} />
       <div className="flex size-full flex-col">
         <div className="root-layout">
-          <Image src="/icons/logo.svg" alt="logo" width={30} height={30} />
+          <Image src="/icons/logo.png" alt="logo" width={30} height={30} />
           <div>
             <MobileNav user={loggedIn} />
           </div>

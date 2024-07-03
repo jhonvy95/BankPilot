@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
 import Footer from "./Footer";
 import PlaidLink from "./PlaidLink";
 
@@ -16,11 +15,11 @@ const Sidebar = ({ user }: SiderbarProps) => {
       <nav className="flex flex-col gap-4">
         <Link href="/" className="flex mb-12 cursor-pointer items-center gap-2">
           <Image
-            src="/icons/logo.svg"
+            src="/icons/logo.png"
             width={34}
             height={34}
             alt="bank pilot"
-            className="size-[24px] max-xl:size-14"
+            className="size-[27px] max-xl:size-14"
           />
           <h1 className="sidebar-logo">BankPilot</h1>
         </Link>
@@ -30,7 +29,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
             <Link
               href={item.route}
               key={item.label}
-              className={cn("sidebar-link", {
+              className={cn("sidebar-link hover:bg-blue-100 hover:bg-opacity-40", {
                 "bg-bank-gradient": isActive,
               })}
             >

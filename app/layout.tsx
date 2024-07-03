@@ -12,7 +12,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
 export const metadata: Metadata = {
   title: "BankPilot",
   description: "BankPilot is a modern banking platform for everyone.",
-  icons: "icons/logo.svg",
+  icons: "icons/logo.png",
 };
 
 export default function RootLayout({
